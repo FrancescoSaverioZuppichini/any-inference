@@ -66,7 +66,7 @@ Now, it two different terminal, let's start the `consumer` first and the `publis
 <div class="termy">
 
 ```console
-$ python consumer.py
+$ python producer.py
 [12:48:14] INFO     ✅ Connected to                      Consumer.py:52
                     amqp://guest:guest@localhost//  
 ```
@@ -78,7 +78,7 @@ And the consumer
 <div class="termy">
 
 ```console
-$ python producer.py
+$ python consumer.py
 [12:48:14] INFO     ✅ Connected to                      Consumer.py:52
                     amqp://guest:guest@localhost//  
 ```
