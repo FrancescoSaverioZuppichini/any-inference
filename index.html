@@ -485,12 +485,12 @@
 <h2 id="how-it-works">How it works</h2>
 <p>The main idea is to use two queues, <code>inputs</code> and <code>outputs</code>. The <code>Producer</code> will place messages into a <code>inputs</code> queue (here shown with <code>ids=1,2,3</code>) and the <code>Consumer</code> will consume them. </p>
 <p><strong>Assume the <code>Consumer</code> will use this messages as input to a machine learning model</strong>, e.g. the messages contains images and we want to predict classes.</p>
-<p><img alt="alt" src="/images/1.png" /></p>
+<p><img alt="alt" src="images/1.png" /></p>
 <p>Once the <code>Consumer</code> is done, it will place it's reply <code>messages</code> back to the <code>outputs</code> queue from which the <code>Producer</code> can read.</p>
-<p><img alt="alt" src="/images/2.png" /></p>
+<p><img alt="alt" src="images/2.png" /></p>
 <h3 id="batch-inference">Batch Inference</h3>
 <p>We can also go one step further, once the <code>Consumer</code> receive a message, it will wait a little bit and consume all the messages in the queue in one go. This will allow us to batch message together and send them for inference.</p>
-<p><img alt="alt" src="/images/3.png" /></p>
+<p><img alt="alt" src="images/3.png" /></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Head over the <a href="getting_started">getting started</a> section.</p>
 <h2 id="examples">Examples</h2>
