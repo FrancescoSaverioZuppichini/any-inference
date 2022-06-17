@@ -8,10 +8,10 @@ setup(
     version="0.0.6",
     author="Francesco Saverio Zuppichini",
     author_email="francesco.zuppichini@gmail.com",
-    description="Compact, concise and customizable deep learning computer vision",
+    description="Run inference in any model using a message broker.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/FrancescoSaverioZuppichini/glasses",
+    url="https://github.com/FrancescoSaverioZuppichini/any-inference",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -19,18 +19,8 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "tqdm",
-        "torchvision",
-        "torch",
-        "requests",
-        "torchinfo",
-        "opencv-python",
-        "matplotlib",
-        "einops",
+        "kombu",
         "rich",
     ],
     python_requires=">=3.8",
-    extras_require={
-        "dev": ["timm", "pretrainedmodels", "pytest", "sotabencheval", "pandas"]
-    },
 )
