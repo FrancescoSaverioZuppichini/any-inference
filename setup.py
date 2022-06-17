@@ -23,4 +23,7 @@ setup(
         "rich",
     ],
     python_requires=">=3.8",
+     extras_require={
+        "dev": ["markdown", "mkdocs-material", "pymdown-extensions", "mkdocstrings", "mkdocs-gen-files", "mkdocs-literate-nav", "mkdocstrings-python"]
+    },
 )
