@@ -12,11 +12,11 @@ The main idea is to use two queues, `inputs` and `outputs`. The `Producer` will 
 
 **Assume the `Consumer` will use this messages as input to a machine learning model**, e.g. the messages contains images and we want to predict classes.
 
-![alt](/images/1.png)
+![alt](./images/1.png)
 
 Once the `Consumer` is done, it will place it's reply `messages` back to the `outputs` queue from which the `Producer` can read.
 
-![alt](/images/2.png)
+![alt](./images/2.png)
 
 
 ### Batch Inference
@@ -24,7 +24,7 @@ Once the `Consumer` is done, it will place it's reply `messages` back to the `ou
 We can also go one step further, once the `Consumer` receive a message, it will wait a little bit and consume all the messages in the queue in one go. This will allow us to batch message together and send them for inference.
 
 
-![alt](/images/3.png)
+![alt](./images/3.png)
 
 
 ## Getting Started
