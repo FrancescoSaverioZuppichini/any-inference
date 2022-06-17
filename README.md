@@ -3,7 +3,7 @@
 🚧 This project is in WIP
 
 ## Doc
-Head over the doc to learn more!
+Head over the [doc](https://francescosaveriozuppichini.github.io/any-inference/) to learn more!
 
 ## Example
 

@@ -1,0 +1,66 @@
+site_name: Any Inference
+repo_url: https://github.com/FrancescoSaverioZuppichini/any-inference
+edit_uri: edit/main/docs
+site_author: Francesco Zuppichini
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+nav:
+  - Docs: index.md
+  - Getting Started: getting_started.md
+  - Examples: math.md
+  - Code Reference: reference/
+
+plugins:
+  - search 
+  - gen-files:
+      scripts:
+      - docs/gen_ref_pages.py  # 
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - mkdocstrings:
+      watch:
+      - src/
+    
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+extra_css:
+  - css/termynal.css
+
+extra_javascript:
+  - javascript/termynal.js
+  - javascript/custom.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
